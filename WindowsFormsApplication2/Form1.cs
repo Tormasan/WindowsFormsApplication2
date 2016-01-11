@@ -41,10 +41,12 @@ namespace WindowsFormsApplication2
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            int[] inputs;
-            for (int i = 1; i <= 5; i++)
+            List<int> cigis = new List<int>();
+            List<int> ragos = new List<int>();
+            foreach (DataRow dr in dataSet11.leszokás.Rows)
             {
-                inputs = dataSet11.leszokás.Rows[i][0];
+                cigis.Add(Convert.ToInt32(dr["cigi"]));
+                ragos.Add(Convert.ToInt32(dr["rágó"]));
             }
             
         }
